@@ -22,7 +22,7 @@ namespace LinqDistinctDemoForms
             string[] myBooks = {"Wings of Fire", "For Me the life is..","Ponniyin Selvan", "Harry's Dairy", "Life Drums",
             "Ponniyin Selvan","Happy Love Story", "For Me the life is..", "Harry's Dairy", "Ponniyin Selvan"};
 
-            var query = (from book in myBooks select book).Distinct();
+            var query = (from book in myBooks  orderby book select book).Distinct();
             listBox1.DataSource = query.ToList();
         }
     }
